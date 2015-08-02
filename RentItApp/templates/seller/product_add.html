@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>GroupZin - Buy to Save</title>
+<meta name="description" content="GroupZin is a platform where Buyers can meet Sellers who are willing to sell an item in bulk for a discounted price.">
+<meta name="author" content="phoneticsinc">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+<!-- Icons -->
+<!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+<link rel="shortcut icon" href="{% static 'img_seller/favicon.png' %}">
+<link rel="apple-touch-icon" href="{% static 'img_seller/icon57.png' %}" sizes="57x57">
+<link rel="apple-touch-icon" href="{% static 'img_seller/icon72.png' %}" sizes="72x72">
+<link rel="apple-touch-icon" href="{% static 'img_seller/icon76.png' %}" sizes="76x76">
+<link rel="apple-touch-icon" href="{% static 'img_seller/icon114.png' %}" sizes="114x114">
+<link rel="apple-touch-icon" href="{% static 'img_seller/icon120.png' %}" sizes="120x120">
+<link rel="apple-touch-icon" href="{% static 'img_seller/icon144.png' %}" sizes="144x144">
+<link rel="apple-touch-icon" href="{% static 'img_seller/icon152.png' %}" sizes="152x152">
+<link rel="apple-touch-icon" href="{% static 'img_seller/icon180.png' %}" sizes="180x180">
+<!-- END Icons -->
+
+<!-- Stylesheets -->
+<!-- Bootstrap is included in its original form, unaltered -->
+<link rel="stylesheet" href="{% static 'css_seller/bootstrap.min.css' %}">
+
+<!-- Related styles of various icon packs and plugins -->
+<link rel="stylesheet" href="{% static 'css_seller/plugins.css' %}">
+
+<!-- The main stylesheet of this template. All Bootstrap overwrites are defined in here -->
+<link rel="stylesheet" href="{% static 'css_seller/main.css' %}">
+
+<!-- Include a specific file here from css/themes/ folder to alter the default theme of the template -->
+
+<!-- The themes stylesheet of this template (for using specific theme color in individual elements - must included last) -->
+<link rel="stylesheet" href="{% static 'css_seller/themes.css' %}">
+<!-- END Stylesheets -->
+
+<!-- Modernizr (browser feature detection library) & Respond.js (enables responsive CSS code on browsers that don't support it, eg IE8) -->
+<script src="{% static 'js_seller/vendor/modernizr-respond.min.js' %}"></script>
+</head>
+<body>
+  <div id="page-wrapper">
+    <div class="preloader themed-background">
+      <h1 class="push-top-bottom text-light text-center"><strong>GroupZ</strong>in</h1>
+      <div class="inner">
+        <h3 class="text-light visible-lt-ie9 visible-lt-ie10"><strong>Loading..</strong></h3>
+        <div class="preloader-spinner hidden-lt-ie9 hidden-lt-ie10"></div>
+      </div>
+    </div>
+<!-- END Preloader -->
+
+<!-- Main Container -->
+<div id="main-container">
+  <header class="navbar navbar-default">
+
+<!-- Left Header Navigation -->
+  <ul class="nav navbar-nav-custom">
+    <li>
+      <a href="page_ecom_dashboard.html"><img src="{% static 'img_seller/logo.png' %}" class="pull-right"></i> <strong>GroupZ</strong>in</a>
+    </li>
+<!-- Main Sidebar Toggle Button -->
+    <li>
+      <a href="javascript:void(0)" onclick="App.sidebar('toggle-sidebar');
+        this.blur();">
+        <i class="fa fa-search"></i>
+      </a>
+    </li>
+<!-- END Main Sidebar Toggle Button -->
+<!-- END Template Options -->
+  </ul>
+<!-- END Left Header Navigation -->
+<!-- Search Form -->
+    <form action="page_ready_search_results.html" method="post" class="navbar-form-custom" role="search">
+      <div class="form-group">
+        <input type="text" id="top-search" name="top-search" class="form-control" placeholder="Search..">
+      </div>
+    </form>
+<!-- END Search Form -->
+<!-- Right Header Navigation -->
+  <ul class="nav navbar-nav-custom pull-right">
+<!-- User Dropdown -->
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="gi gi-user"></i> <i class="fa fa-angle-down"></i>
+      </a>
+      <ul class="dropdown-menu dropdown-custom dropdown-menu-right">
+        <li class="dropdown-header text-center">Account</li>
+        <li class="divider"></li>
+        <li>
+          <a href="#modal-user-settings" data-toggle="modal">
+            <i class="fa fa-cog fa-fw pull-right"></i>
+            Settings
+          </a>
+        </li>
+        <li class="divider"></li>
+        <li>
+          <a href="page_ready_lock_screen_alt.html"><i class="fa fa-lock fa-fw pull-right"></i> Lock Account</a>
+          <a href="login_full.html"><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
+        </li>
+        <li class="divider"></li>
+        <li>
+          <a href="#modal-user-share" data-toggle="modal"><i class="fa fa-share fa-fw pull-right"></i>Share</a>
+        </li>
+      </ul>
+    </li>
+    <!-- END User Dropdown -->
+  </ul>
+<!-- END Right Header Navigation -->
+</header>
+<!-- END Header -->
+<!-- Page content -->
+<div id="page-content">
+<!-- eCommerce Dashboard Header -->
+  <div class="content-header">
+    <ul class="nav-horizontal text-center">
+      <li>
+        <a href="page_ecom_dashboard.html"><i class="fa fa-bar-chart"></i> Dashboard</a>
+      </li>
+      <li class="active">
+        <a href="product_add.html"><i class="gi gi-plus"></i> Add Products</a>
+      </li>
+      <li>
+        <a href="#modal-user-settings" data-toggle="modal"><i class="gi gi-user"></i> Profile</a>
+      </li>
+      <li>
+        <a href="login_full.html"><i class="gi gi-unlock"></i> Logout</a>
+      </li>
+    </ul>
+  </div>
+<!-- END eCommerce Dashboard Header -->
+<!-- Product Edit Content -->
+  <div class="row">
+    <div class="col-lg-6">
+<!-- General Data Block -->
+      <div class="block">
+<!-- General Data Title -->
+        <div class="block-title">
+          <h2><i class="fa fa-pencil"></i> <strong>General</strong> Data</h2>
+        </div>
+<!-- END General Data Title -->
+<!-- General Data Content -->
+    <form action="/product_data_add" method="post" class="form-horizontal form-bordered" onsubmit="return true;">
+      {% csrf_token %}
+      <input type="hidden" name="product_id_label" value="{{ product_id }}">
+      <div class="form-group">
+        <label class="col-md-3 control-label" for="product-name">Product Name</label>
+        <div class="col-md-9">
+          {{ new_product_form.product_name }}
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-3 control-label" for="ad-title">Ad Title</label>
+        <div class="col-md-9">
+          {{ new_product_form.product_title }}
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-3 control-label" for="product-category">Category</label>
+        <div class="col-md-8">
+          {{ new_product_form.product_category }}
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-3 control-label" for="available-from" style="margin-right: 2%;">Available From</label>
+        {{ new_product_form.available_from }}
+      </div>
+      <div class="form-group">
+        <label class="col-md-3 control-label" for="available-till" style="margin-right: 2%;">Available Till</label>
+        {{ new_product_form.available_till }}
+      </div>
+      <div class="form-group">
+        <label class="col-md-3 control-label" for="product-description">Description</label>
+        <div class="col-md-9">
+          {{ new_product_form.product_description }}
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-3 control-label" for="product-short-description">Rental Conditions</label>
+        <div class="col-md-9">
+          {{ new_product_form.product_conditions }}
+        </div>
+      </div>
+    </div>
+  <div class="form-group form-actions">
+    <div class="col-md-9 col-md-offset-3">
+      <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-floppy-o"></i> Add</button>
+      <button type="reset" class="btn btn-sm btn-warning"><i class="fa fa-repeat"></i> Reset</button>
+    </div>
+  </div>
+  </form>
+  <!-- END General Data Content -->
+  <!-- END General Data Block -->
+</div>
+<div class="col-lg-6">
+<!-- Product Images Block -->
+  <div class="block">
+  <!-- Product Images Title -->
+    <div class="block-title">
+      <h2><i class="fa fa-picture-o"></i> <strong>Product</strong> Images</h2>
+    </div>
+<!-- END Product Images Title -->
+<!-- Product Images Content -->
+    <div class="block-section">
+      <!-- Dropzone.js, You can check out https://github.com/enyo/dropzone/wiki for usage examples -->
+      <form action="page_ecom_product_edit.html" class="dropzone"></form>
+    </div>
+    <table class="table table-bordered table-striped table-vcenter">
+      <tbody>
+        <tr>
+          <td style="width: 20%;">
+            <a href="{% static 'img_seller/placeholders/photos/photo11.jpg' %}" data-toggle="lightbox-image">
+              <img src="{% static 'img_seller/placeholders/photos/photo11.jpg' %}" alt="" class="img-responsive center-block" style="max-width: 110px;">
+            </a>
+          </td>
+          <td class="text-center">
+            <label class="switch switch-primary">
+              <input type="checkbox" checked><span></span>
+            </label>
+            Cover
+          </td>
+          <td class="text-center">
+            <a href="javascript:void(0)" class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i> Delete</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="{% static 'img_seller/placeholders/photos/photo13.jpg' %}" data-toggle="lightbox-image">
+              <img src="{% static 'img_seller/placeholders/photos/photo13.jpg' %}" alt="" class="img-responsive center-block" style="max-width: 110px;">
+            </a>
+          </td>
+          <td class="text-center">
+            <label class="switch switch-primary">
+              <input type="checkbox"><span></span>
+            </label>
+            Cover
+          </td>
+          <td class="text-center">
+            <a href="javascript:void(0)" class="btn btn-xs btn-danger"><i class="fa fa-trash-o"></i> Delete</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+<!-- END Product Images Content -->
+    </div>
+<!-- END Product Images Block -->
+  </div>
+</div>
+<!-- END Product Edit Content -->
+</div>
+<!-- END Page Content -->
+
+<!-- Footer -->
+<footer class="clearfix">
+<div class="pull-right">
+Crafted with <i class="fa fa-heart text-danger"></i> by <a href="http://phoneticsinc.com" target="_blank">Phonetics</a>
+</div>
+<div class="pull-left">
+<span id="year-copy"></span> &copy; <a href="http://phoneticsinc.com" target="_blank">Phonetics</a>
+</div>
+</footer>
+<!-- END Footer -->
+</div>
+<!-- END Main Container -->
+</div>
+<!-- END Page Container -->
+</div>
+<!-- END Page Wrapper -->
+
+<!-- Scroll to top link, initialized in js/app.js - scrollToTop() -->
+<a href="#" id="to-top"><i class="fa fa-angle-double-up"></i></a>
+
+<!-- User Settings, modal which opens from Settings link (found in top right user menu) and the Cog link (found in sidebar user info) -->
+<div id="modal-user-settings" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+           <div class="modal-dialog">
+               <div class="modal-content">
+                   <!-- Modal Header -->
+                   <div class="modal-header text-center">
+                       <h2 class="modal-title"><i class="fa fa-pencil"></i> Profile Settings</h2>
+                   </div>
+                   <!-- END Modal Header -->
+                   <!--Settings Modal Body -->
+                   <div class="modal-body">
+                       <form action="index.html" method="post" enctype="multipart/form-data" class="form-horizontal form-bordered" onsubmit="return false;">
+                           <fieldset>
+                               <legend><strong>Vital Info</strong></legend>
+                               <div class="form-group">
+                                   <label class="col-md-4 control-label"><i class="gi gi-user"></i></label>
+                                   <div class="col-md-8">
+                                       <p class="form-control-static"> {{ tUserDetails.uname }}</p>
+                                   </div>
+                               </div>
+                               <div class="form-group">
+                                   <label class="col-md-4 control-label" for="user-settings-email">Email</label>
+                                   <div class="col-md-8">
+                                      <p class="form-control-static">{{ tUserEmail.umail }}</p>
+                                   </div>
+                               </div>
+                               <div class="form-group">
+                                 <label class="col-md-4 control-label" for="user-settings-email">Mobile</label>
+                                 <div class="col-md-8">
+                                     <input type="mobile" id="register-mobile" name="register-mobile" class="form-control input-lg" placeholder="Mobile Number" value={{ tUserDetails.umobile }}>
+                                     <label class="switch switch-warning" data-toggle="tooltip" title="I don't wanna show it to others.." style="margin-top: 2%;">
+                                     <input type="checkbox" id="register-terms" name="register-terms">
+                                     <span></span>
+                                   </label>
+                                   </div>
+                               </div>
+                               <div class="form-group">
+                                   <label class="col-md-4 control-label" for="user-settings-city">City</label>
+                                   <div class="col-md-8">
+                                       <input type="text" id="user-settings-city" name="user-settings-city" class="form-control" value={{ tUserDetails.ucity }}>
+                                   </div>
+                               </div>
+                           </fieldset>
+                           <fieldset>
+                               <legend>Password Update</legend>
+                               <div class="form-group">
+                                   <label class="col-md-4 control-label" for="user-settings-password">Old Password</label>
+                                   <div class="col-md-8">
+                                       <input type="password" id="user-settings-password" name="user-settings-password" class="form-control" placeholder="Please choose a complex one..">
+                                   </div>
+                               </div>
+                               <div class="form-group">
+                                   <label class="col-md-4 control-label" for="user-settings-repassword">New Password</label>
+                                   <div class="col-md-8">
+                                       <input type="password" id="user-settings-repassword" name="user-settings-repassword" class="form-control" placeholder="..and confirm it!">
+                                   </div>
+                               </div>
+                           </fieldset>
+                           <div class="form-group form-actions">
+                               <div class="col-xs-12 text-right">
+                                   <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancel</button>
+                                   <button type="submit" class="btn btn-sm btn-primary">Save Changes</button>
+                               </div>
+                           </div>
+                       </form>
+                   </div>
+                   <!-- END Modal Body -->
+               </div>
+           </div>
+       </div>
+       <!-- END Profile Settings -->
+<!---Share pop over ---->
+<div id="modal-user-share" class="modal fade" tabindex="-2" role="dialog" aria-hidden="true">
+<div class="modal-dialog" style="margin-right: 18%;">
+<div class="modal-content" style="width: 59%;">
+<!-- Modal Header -->
+<div class="modal-header text-center">
+<h2 class="modal-title"><i class="fa fa-share-alt"></i> Share</h2>
+</div>
+<!-- END Modal Header -->
+<!-- Modal Body -->
+<div class="modal-body">
+<fieldset>
+<a href="/auth/twitter">
+<div class="test-circle themed-border themed-background" data-toggle="tooltip" title="Twitter" style="background-color: #0084B4;">
+<i class="fa fa-twitter"></i>
+</div>
+</a>
+<a href="/auth/facebook">
+<div class="test-circle themed-border label-danger" data-toggle="tooltip" title="Facebook"  style="background-color: #3a5795;">
+<i class="fa fa-facebook"></i>
+</div>
+</a>
+<a href="/auth/google">
+<div class="test-circle themed-border themed-background" data-toggle="tooltip" title="Google Plus" style="background-color: #d73d32;">
+<i class="fa fa-google-plus"></i>
+</div>
+</a>
+</fieldset>
+</div>
+<!-- END Modal Body -->
+</div>
+</div>
+</div>
+<!-- END share pop over -->
+<!-- Include Jquery library from Google's CDN but if something goes wrong get Jquery from local file -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>!window.jQuery && document.write(decodeURI('%3Cscript src="{% static 'js_seller/vendor/jquery-1.11.2.min.js' %}"%3E%3C/script%3E'));</script>
+
+<!-- Bootstrap.js, Jquery plugins and Custom JS code -->
+<script src="{% static 'js_seller/vendor/bootstrap.min.js' %}"></script>
+<script src="{% static 'js_seller/plugins.js' %}"></script>
+<script src="{% static 'js_seller/app.js' %}"></script>
+<script src="{% static 'js_seller/pages/formsValidations.js' %}"></script>
+</body>
+</html>

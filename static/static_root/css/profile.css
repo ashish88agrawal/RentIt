@@ -1,0 +1,46 @@
+
+.pimage
+{
+margin-left: 34px;
+margin-top: -27px;
+font: 13px Helvetica Neue;
+color: rgba(0, 0, 0, 0.77);
+font-weight: 200;
+}
+.pmage:hover {
+		-webkit-filter: grayscale(0.5) blur(10px);
+	}
+.pic{
+ margin-right: 30px;
+ }
+ .upload
+ {
+width: 200px;
+height: 240px;
+ }
+.edit,.editEmail
+{
+	margin-left:70%;
+	font-size: 13px;
+}
+.data
+{
+	font-size: 16px;
+}
+.businessPortfolio
+{
+    margin-left: 161px;
+}
+.panel-heading:hover {
+        background-color: #fff;
+    }
+.image{
+	margin-left: 15%;
+	width:10%;
+	height: :10%;
+}
+.picture
+{
+	margin-left: 73%;
+
+}
