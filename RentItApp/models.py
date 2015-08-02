@@ -11,7 +11,7 @@ class User(models.Model):
 		db_table = "users"
 
 
-class User_registration(models.Model):
+class UserRegistration(models.Model):
 	uid = models.IntegerField()
 	uname = models.CharField(max_length=50)
 	umobile = models.CharField(max_length=12, null=True)
@@ -21,7 +21,7 @@ class User_registration(models.Model):
 		db_table = "users_registration"
 
 
-class Product_category(models.Model):
+class ProductCategory(models.Model):
 	pc_id = models.AutoField(primary_key=True)
 	pc_name = models.CharField(max_length=70)
 
@@ -29,7 +29,7 @@ class Product_category(models.Model):
 		db_table = "product_category"
 
 
-class Product_registration(models.Model):
+class ProductRegistration(models.Model):
 	uid = models.IntegerField()
 	product_id = models.AutoField(primary_key=True)
 	product_name = models.CharField(max_length=30, null=True)
