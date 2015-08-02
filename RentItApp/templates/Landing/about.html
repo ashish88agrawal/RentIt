@@ -1,234 +1,275 @@
 <!DOCTYPE html>
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-   <head>
-        <meta charset="utf-8">
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
 
-        <title>GroupZin - Buy to Save</title>
+    <title>GroupZin - Buy to Save</title>
 
-        <meta name="description" content="Rent It is a platform where Rentee meet the owners who are willing to rent an item.">
-        <meta name="author" content="phoneticsinc">
-        <meta name="robots" content="noindex, nofollow">
-        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+    <meta name="description"
+          content="Rent It is a platform where Rentee meet the owners who are willing to rent an item.">
+    <meta name="author" content="phoneticsinc">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
 
-        <!-- Stylesheets -->
-        <!-- Bootstrap is included in its original form, unaltered -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Stylesheets -->
+    <!-- Bootstrap is included in its original form, unaltered -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-        <!-- Related styles of various icon packs and plugins -->
-        <link rel="stylesheet" href="css/plugins.css">
+    <!-- Related styles of various icon packs and plugins -->
+    <link rel="stylesheet" href="css/plugins.css">
 
-        <!-- The main stylesheet of this template. All Bootstrap overwrites are defined in here -->
-        <link rel="stylesheet" href="css/main.css">
+    <!-- The main stylesheet of this template. All Bootstrap overwrites are defined in here -->
+    <link rel="stylesheet" href="css/main.css">
 
-        <!-- Include a specific file here from css/themes/ folder to alter the default theme of the template -->
+    <!-- Include a specific file here from css/themes/ folder to alter the default theme of the template -->
 
-        <!-- The themes stylesheet of this template (for using specific theme color in individual elements - must included last) -->
-        <link rel="stylesheet" href="css/themes.css">
-        <!-- END Stylesheets -->
-        <!-- Modernizr (browser feature detection library) & Respond.js (enables responsive CSS code on browsers that don't support it, eg IE8) -->
-        <script src="js/vendor/modernizr-respond.min.js"></script>
-    </head>
-    <body>
-        <!-- Page Container -->
-        <!-- In the PHP version you can set the following options from inc/config file -->
-        <!-- 'boxed' class for a boxed layout -->
-        <div id="page-container" class="boxed">
-            <!-- Site Header -->
-            <header>
-                <div class="container">
-                    <!-- Site Logo -->
-                <ul>
-                    <h1 class="pull-left navbar-custom"><strong>Rent</strong>It</h1>
-                   <a href="index_boxed_parallax.html"><img src="img/logo.png" class="pull-left nav-custom"></a>
-                    <!-- Site Logo -->
+    <!-- The themes stylesheet of this template (for using specific theme color in individual elements - must included last) -->
+    <link rel="stylesheet" href="css/themes.css">
+    <!-- END Stylesheets -->
+    <!-- Modernizr (browser feature detection library) & Respond.js (enables responsive CSS code on browsers that don't support it, eg IE8) -->
+    <script src="js/vendor/modernizr-respond.min.js"></script>
+</head>
+<body>
+<!-- Page Container -->
+<!-- In the PHP version you can set the following options from inc/config file -->
+<!-- 'boxed' class for a boxed layout -->
+<div id="page-container" class="boxed">
+    <!-- Site Header -->
+    <header>
+        <div class="container">
+            <!-- Site Logo -->
+            <ul>
+                <h1 class="pull-left navbar-custom"><strong>Rent</strong>It</h1>
+                <a href="home.html"><img src="img/logo.png" class="pull-left nav-custom"></a>
+                <!-- Site Logo -->
 
-                    <!-- Site Navigation -->
-                    <nav>
-                        <!-- Menu Toggle -->
+                <!-- Site Navigation -->
+                <nav>
+                    <!-- Menu Toggle -->
+                    <!-- Toggles menu on small screens -->
+                    <a href="javascript:void(0)" class="btn btn-default site-menu-toggle visible-xs visible-sm">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <!-- END Menu Toggle -->
+
+                    <!-- Main Menu -->
+                    <ul class="site-nav">
                         <!-- Toggles menu on small screens -->
-                        <a href="javascript:void(0)" class="btn btn-default site-menu-toggle visible-xs visible-sm">
-                            <i class="fa fa-bars"></i>
-                        </a>
+                        <li class="visible-xs visible-sm">
+                            <a href="javascript:void(0)" class="site-menu-toggle text-center">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </li>
                         <!-- END Menu Toggle -->
-
-                        <!-- Main Menu -->
-                        <ul class="site-nav">
-                            <!-- Toggles menu on small screens -->
-                            <li class="visible-xs visible-sm">
-                                <a href="javascript:void(0)" class="site-menu-toggle text-center">
-                                    <i class="fa fa-times"></i>
-                                </a>
-                            </li>
-                            <!-- END Menu Toggle -->
-                            <li>
-                                <a href="index_boxed_parallax.html" class="site-nav-sub">Home</a>
-                            </li>
-                            <li>
-                                <a href="how_it_works.html">How it Works?</a>
-                            </li> 
-                            <li>
-                                <a href="javascript:void(0)" class="site-nav-sub"><i class="fa fa-angle-down site-nav-arrow"></i>Account</a>
-                                <ul>
-                                    <li>
-                                        <a href="../seller/login_full.html">Login</a>
-                                    </li>
-                                    <li>
-                                        <a href="../seller/login_full.html#register">Register</a>
-                                    </li>
-                                </ul>
-                            </li>                      
-                        </ul>
+                        <li>
+                            <a href="home.html" class="site-nav-sub">Home</a>
+                        </li>
+                        <li>
+                            <a href="how_it_works.html">How it Works?</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="site-nav-sub"><i
+                                    class="fa fa-angle-down site-nav-arrow"></i>Account</a>
+                            <ul>
+                                <li>
+                                    <a href="../seller/login.html">Login</a>
+                                </li>
+                                <li>
+                                    <a href="../seller/login.html#register">Register</a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
-                        <!-- END Main Menu -->
-                    </nav>
-                    <!-- END Site Navigation -->
-                </div>
-            </header>
-            <!-- END Site Header -->
+            </ul>
+            <!-- END Main Menu -->
+            </nav>
+            <!-- END Site Navigation -->
+        </div>
+    </header>
+    <!-- END Site Header -->
 
-            <!-- Media Container -->
-            <div class="media-container">
-                <!-- Intro -->
-                <section class="site-section site-section-light site-section-top">
-                    <div class="container">
-                        <h1 class="text-center animation-slideDown"><i class="fa fa-building-o"></i> <strong>Our Company</strong></h1>
-                        <h2 class="h3 text-center animation-slideUp"><strong>Built with love by passionate people!</strong></h2>
-                    </div>
-                </section>
-                <!-- END Intro -->
+    <!-- Media Container -->
+    <div class="media-container">
+        <!-- Intro -->
+        <section class="site-section site-section-light site-section-top">
+            <div class="container">
+                <h1 class="text-center animation-slideDown"><i class="fa fa-building-o"></i> <strong>Our
+                    Company</strong></h1>
 
-                <!-- Gmaps.js (initialized in js/pages/about.js), for more examples you can check out http://hpneo.github.io/gmaps/examples.html -->
-                <div id="gmap-top" class="media-map"></div>
+                <h2 class="h3 text-center animation-slideUp"><strong>Built with love by passionate people!</strong></h2>
             </div>
-            <!-- END Media Container -->
+        </section>
+        <!-- END Intro -->
 
-            <!-- Company Info -->
-            <section class="site-content site-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <div class="site-block">
-                                <h3 class="site-heading"><strong>When</strong> did all start?</h3>
-                                <p>Maecenas ultrices, justo vel imperdiet gravida, urna ligula hendrerit nibh, ac cursus nibh sapien in purus. Mauris tincidunt tincidunt turpis in porta. Integer fermentum tincidunt auctor. Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum leo mi nec lectus. Nam commodo turpis id lectus scelerisque vulputate. Integer sed dolor erat. Fusce erat ipsum, varius vel euismod sed, tristique et lectus? Etiam egestas fringilla enim, id convallis lectus laoreet at. Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque? Proin rhoncus dui at ligula vestibulum ut facilisis ante sodales! Suspendisse potenti. Aliquam tincidunt sollicitudin sem nec ultrices. Sed at mi velit. Ut egestas tempor est, in cursus enim venenatis eget!</p>
-                            </div>
-                            <div class="site-block">
-                                <h3 class="site-heading"><strong>Where</strong> did all start?</h3>
-                                <p>Donec lacinia venenatis metus at bibendum? In hac habitasse platea dictumst. Proin ac nibh rutrum lectus rhoncus eleifend. Sed porttitor pretium venenatis. Suspendisse potenti. Aliquam quis ligula elit. Aliquam at orci ac neque semper dictum. Sed tincidunt scelerisque ligula, et facilisis nulla hendrerit non. Suspendisse potenti. Pellentesque non accumsan orci. Praesent at lacinia dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="site-block">
-                                <h3 class="site-heading"><strong>What</strong> will the future bring?</h3>
-                                <p>Mauris tincidunt tincidunt turpis in porta. Integer fermentum tincidunt auctor. Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum leo mi nec lectus. Nam commodo turpis id lectus scelerisque vulputate. Integer sed dolor erat. Fusce erat ipsum, varius vel euismod sed, tristique et lectus? Etiam egestas fringilla enim, id convallis lectus laoreet at. Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque? Proin rhoncus dui at ligula vestibulum ut facilisis ante sodales! Suspendisse potenti. Aliquam tincidunt sollicitudin sem nec ultrices. Sed at mi velit. Ut egestas tempor est, in cursus enim venenatis eget!</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="site-block">
-                            </div>
-                            <div class="site-block">
-                                <p class="text-center">
-                                    <img src="img/placeholders/avatars/avatar2.jpg" alt="Avatar" class="img-circle">
-                                </p>
-                                <blockquote>
-                                    <p>I'm grateful we made it that far and continue strong! Thank you all for supporting us!</p>
-                                    <footer><strong>John Doe</strong>, CEO</footer>
-                                </blockquote>
-                            </div>
-                        </div>
+        <!-- Gmaps.js (initialized in js/pages/about.js), for more examples you can check out http://hpneo.github.io/gmaps/examples.html -->
+        <div id="gmap-top" class="media-map"></div>
+    </div>
+    <!-- END Media Container -->
+
+    <!-- Company Info -->
+    <section class="site-content site-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="site-block">
+                        <h3 class="site-heading"><strong>When</strong> did all start?</h3>
+
+                        <p>Maecenas ultrices, justo vel imperdiet gravida, urna ligula hendrerit nibh, ac cursus nibh
+                            sapien in purus. Mauris tincidunt tincidunt turpis in porta. Integer fermentum tincidunt
+                            auctor. Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci,
+                            eget dictum leo mi nec lectus. Nam commodo turpis id lectus scelerisque vulputate. Integer
+                            sed dolor erat. Fusce erat ipsum, varius vel euismod sed, tristique et lectus? Etiam egestas
+                            fringilla enim, id convallis lectus laoreet at. Fusce purus nisi, gravida sed consectetur
+                            ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque? Proin rhoncus
+                            dui at ligula vestibulum ut facilisis ante sodales! Suspendisse potenti. Aliquam tincidunt
+                            sollicitudin sem nec ultrices. Sed at mi velit. Ut egestas tempor est, in cursus enim
+                            venenatis eget!</p>
+                    </div>
+                    <div class="site-block">
+                        <h3 class="site-heading"><strong>Where</strong> did all start?</h3>
+
+                        <p>Donec lacinia venenatis metus at bibendum? In hac habitasse platea dictumst. Proin ac nibh
+                            rutrum lectus rhoncus eleifend. Sed porttitor pretium venenatis. Suspendisse potenti.
+                            Aliquam quis ligula elit. Aliquam at orci ac neque semper dictum. Sed tincidunt scelerisque
+                            ligula, et facilisis nulla hendrerit non. Suspendisse potenti. Pellentesque non accumsan
+                            orci. Praesent at lacinia dolor. Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit.</p>
+                    </div>
+                    <div class="site-block">
+                        <h3 class="site-heading"><strong>What</strong> will the future bring?</h3>
+
+                        <p>Mauris tincidunt tincidunt turpis in porta. Integer fermentum tincidunt auctor. Vestibulum
+                            ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum leo mi nec
+                            lectus. Nam commodo turpis id lectus scelerisque vulputate. Integer sed dolor erat. Fusce
+                            erat ipsum, varius vel euismod sed, tristique et lectus? Etiam egestas fringilla enim, id
+                            convallis lectus laoreet at. Fusce purus nisi, gravida sed consectetur ut, interdum quis
+                            nisi. Quisque egestas nisl id lectus facilisis scelerisque? Proin rhoncus dui at ligula
+                            vestibulum ut facilisis ante sodales! Suspendisse potenti. Aliquam tincidunt sollicitudin
+                            sem nec ultrices. Sed at mi velit. Ut egestas tempor est, in cursus enim venenatis eget!</p>
                     </div>
                 </div>
-            </section>
-            <!-- END Company Info -->
-
-            <!-- Work Together Action -->
-            <section class="site-content site-section themed-background-dark-night">
-                <div class="container">
-                    <div class="site-block text-center">
-                        <a href="contact.html" class="btn btn-lg btn-primary">Let's work together!</a>
+                <div class="col-sm-4">
+                    <div class="site-block">
+                    </div>
+                    <div class="site-block">
+                        <p class="text-center">
+                            <img src="img/placeholders/avatars/avatar2.jpg" alt="Avatar" class="img-circle">
+                        </p>
+                        <blockquote>
+                            <p>I'm grateful we made it that far and continue strong! Thank you all for supporting
+                                us!</p>
+                            <footer><strong>John Doe</strong>, CEO</footer>
+                        </blockquote>
                     </div>
                 </div>
-            </section>
-            <!-- END Work Together Action -->
+            </div>
+        </div>
+    </section>
+    <!-- END Company Info -->
+
+    <!-- Work Together Action -->
+    <section class="site-content site-section themed-background-dark-night">
+        <div class="container">
+            <div class="site-block text-center">
+                <a href="contact.html" class="btn btn-lg btn-primary">Let's work together!</a>
+            </div>
+        </div>
+    </section>
+    <!-- END Work Together Action -->
     <!-- Subscribe Action -->
-            <section class="site-content site-section site-section-light parallax-image" style="background-image: url('img/placeholders/parallax/photo4.jpg');">
-                <div class="container">
-                    <h3 class="site-heading text-center"><strong>Subscribe</strong> for news <strong>letters</strong>!</h3>
-                    <div class="site-block text-center">
-                        <form action="features.html" method="post" class="form-horizontal" onsubmit="return false;">
-                            <div class="form-group">
-                                <div class="col-md-6 col-md-offset-3">
-                                    <label class="sr-only" for="register-email">Your Email</label>
-                                    <div class="input-group input-group-lg">
-                                        <input type="email" id="register-email" name="register-email" class="form-control" placeholder="Your Email..">
-                                        <div class="input-group-btn">
-                                            <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Subscribe</button>
-                                        </div>
-                                    </div>
+    <section class="site-content site-section site-section-light parallax-image"
+             style="background-image: url('img/placeholders/parallax/photo4.jpg');">
+        <div class="container">
+            <h3 class="site-heading text-center"><strong>Subscribe</strong> for news <strong>letters</strong>!</h3>
+
+            <div class="site-block text-center">
+                <form action="features.html" method="post" class="form-horizontal" onsubmit="return false;">
+                    <div class="form-group">
+                        <div class="col-md-6 col-md-offset-3">
+                            <label class="sr-only" for="register-email">Your Email</label>
+
+                            <div class="input-group input-group-lg">
+                                <input type="email" id="register-email" name="register-email" class="form-control"
+                                       placeholder="Your Email..">
+
+                                <div class="input-group-btn">
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Subscribe
+                                    </button>
                                 </div>
                             </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-            <!-- END Subscribe Action -->
-            <!-- Footer -->
-            <footer class="site-footer site-section">
-                <div class="container">
-                    <!-- Footer Links -->
-                    <div class="row">
-                        <div class="col-sm-6 col-md-3">
-                            <h4 class="footer-heading">About Us</h4>
-                            <ul class="footer-nav list-inline">
-                                <li><a href="about.html">Company</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <h4 class="footer-heading">Legal</h4>
-                            <ul class="footer-nav list-inline">
-                                <li><a href="javascript:void(0)">Licensing</a></li>
-                                <li><a href="javascript:void(0)">Privacy Policy</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <h4 class="footer-heading">Follow Us</h4>
-                            <ul class="footer-nav footer-nav-social list-inline">
-                                <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="fa fa-google-plus"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <h4 class="footer-heading"><span>2015-2016</span> &copy; <a href="http://phoneticsinc.com" target="_blank">Phonetics</a></h4>
-                            <ul class="footer-nav list-inline">
-                                <li>Crafted with <i class="fa fa-heart text-danger"></i> by <a href="http://phoneticsinc.com" target="_blank">Phonetics</a></li>
-                            </ul>
                         </div>
                     </div>
-                    <!-- END Footer Links -->
-                </div>
-            </footer>
-            <!-- END Footer -->
+                </form>
+            </div>
         </div>
-        <!-- END Page Container -->
+    </section>
+    <!-- END Subscribe Action -->
+    <!-- Footer -->
+    <footer class="site-footer site-section">
+        <div class="container">
+            <!-- Footer Links -->
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <h4 class="footer-heading">About Us</h4>
+                    <ul class="footer-nav list-inline">
+                        <li><a href="about.html">Company</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <h4 class="footer-heading">Legal</h4>
+                    <ul class="footer-nav list-inline">
+                        <li><a href="javascript:void(0)">Licensing</a></li>
+                        <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <h4 class="footer-heading">Follow Us</h4>
+                    <ul class="footer-nav footer-nav-social list-inline">
+                        <li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="javascript:void(0)"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <h4 class="footer-heading"><span>2015-2016</span> &copy; <a href="http://phoneticsinc.com"
+                                                                                target="_blank">Phonetics</a></h4>
+                    <ul class="footer-nav list-inline">
+                        <li>Crafted with <i class="fa fa-heart text-danger"></i> by <a href="http://phoneticsinc.com"
+                                                                                       target="_blank">Phonetics</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- END Footer Links -->
+        </div>
+    </footer>
+    <!-- END Footer -->
+</div>
+<!-- END Page Container -->
 
-        <!-- Scroll to top link, initialized in js/app.js - scrollToTop() -->
-        <a href="#" id="to-top"><i class="fa fa-angle-up"></i></a>
+<!-- Scroll to top link, initialized in js/app.js - scrollToTop() -->
+<a href="#" id="to-top"><i class="fa fa-angle-up"></i></a>
 
-        <!-- Include Jquery library from Google's CDN but if something goes wrong get Jquery from local file -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>!window.jQuery && document.write(decodeURI('%3Cscript src="js/vendor/jquery-1.11.2.min.js"%3E%3C/script%3E'));</script>
+<!-- Include Jquery library from Google's CDN but if something goes wrong get Jquery from local file -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>!window.jQuery && document.write(decodeURI('%3Cscript src="js/vendor/jquery-1.11.2.min.js"%3E%3C/script%3E'));</script>
 
-        <!-- Bootstrap.js, Jquery plugins and Custom JS code -->
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/app.js"></script>
+<!-- Bootstrap.js, Jquery plugins and Custom JS code -->
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/app.js"></script>
 
-        <!-- Google Maps API + Gmaps Plugin, must be loaded in the page you would like to use maps -->
-        <script src="//maps.google.com/maps/api/js?sensor=true"></script>
-        <script src="js/helpers/gmaps.min.js"></script>
+<!-- Google Maps API + Gmaps Plugin, must be loaded in the page you would like to use maps -->
+<script src="//maps.google.com/maps/api/js?sensor=true"></script>
+<script src="js/helpers/gmaps.min.js"></script>
 
-        <!-- Load and execute javascript code used only in this page -->
-        <script src="js/pages/about.js"></script>
-        <script>$(function(){ About.init(); });</script>
-    </body>
+<!-- Load and execute javascript code used only in this page -->
+<script src="js/pages/about.js"></script>
+<script>$(function () {
+    About.init();
+});</script>
+</body>
 </html>
