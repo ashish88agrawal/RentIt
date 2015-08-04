@@ -14,19 +14,20 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
 from django.conf.urls import patterns, include, url
-from RentIt import settings
+from django.conf import settings
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = patterns('',
-    url(r'^$', 'RentItApp.home_views.home', name='home'),
-    url(r'^login_full', 'RentItApp.login_views.login', name='login'),
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^register', 'RentItApp.views.register', name='register'),
-    url(r'^show', 'RentItApp.views.show', name='show'),
-    url(r'^edit', 'RentItApp.views.show_details', name='show_details'),
-    url(r'^product_add', 'RentItApp.product_views.product_add', name='product_add'),
-    url(r'^product_data_add', 'RentItApp.product_views.product_data_add', name='product_data_add'),
-    url(r'upload_product_image', 'RentItApp.product_views.upload_product_image', name='upload_product_image')
-) + static(settings.MEDIA_URL, document_root=settings.MeMEDIA_ROOT)
+                       url(r'^$', 'RentItApp.home_views.home', name='home'),
+                       url(r'^login', 'RentItApp.login_views.login', name='login'),
+                       url(r'^admin/', include(admin.site.urls)),
+                       url(r'^register', 'RentItApp.views.register', name='register'),
+                       url(r'^show', 'RentItApp.views.show', name='show'),
+                       url(r'^edit', 'RentItApp.views.show_details', name='show_details'),
+                       url(r'^product_add', 'RentItApp.product_views.product_add', name='product_add'),
+                       url(r'^product_data_add', 'RentItApp.product_views.product_data_add', name='product_data_add'),
+                       url(r'upload_product_image', 'RentItApp.product_views.upload_product_image',
+                           name='upload_product_image')
+                       ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
