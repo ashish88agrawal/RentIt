@@ -1,4 +1,5 @@
 from django.shortcuts import render
+
 from RentItApp.models import ProductRegistration
 from RentItApp.models import ProductCategory
 
