@@ -1,11 +1,9 @@
-from django.shortcuts import render_to_response
 from django.shortcuts import render
-# from forms import SignupForm
+
 from RentItApp.models import User
 from RentItApp.models import UserRegistration
 from RentItApp.models import ProductCategory
 from RentItApp.models import ProductRegistration
-
 
 temp = ""
 uemail = ""
@@ -35,9 +33,7 @@ def register(request):
 
 def show(request):
 	login_user_email = request.POST.get("login-email")
-	print("This is login user:")
-	print(login_user_email)
-	global pr, pr
+	global pr
 	request.session['uemail'] = login_user_email
 	login_user_pass = request.POST.get("login-password")
 	list1 = []
@@ -52,10 +48,8 @@ def show(request):
 		index_pass = list2[index_email]
 		e = User.objects.get(umail=request.session['uemail'])
 		uid = e.uid
-		print(uid)
 		request.session['global_uid'] = uid
 		ee = UserRegistration.objects.get(uid=uid)
-		print(ee.uname)
 		uname = ee.uname
 
 		if index_pass == login_user_pass:
@@ -70,9 +64,12 @@ def show(request):
 			for sProduct in pr:
 				category_id = sProduct.pc_id
 				pass
-				return render_to_response(request, 'seller/user_dashboard.html', {'list1': uname, 'pr_details': pr, 'pr_category': category_id})
+				return render(request, 'seller/user_dashboard.html',
+								{'UserName': uname, 'pr_details': pr, 'pr_category': category_id})
+		else:
+			return render("seller/login.html", {'Error': 'Wrong password, please enter valid Credentials.'})
 	else:
-		return render_to_response("seller/login.html", {'list1': 'Wrong password, please enter valid Credentials.'})
+		return render("seller/login.html", {'Error': 'Wrong password, please enter valid Credentials.'})
 
 
 def show_details(request):

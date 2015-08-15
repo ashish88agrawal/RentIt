@@ -31,6 +31,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'RentItApp',
+    'social.apps.django_app.default',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -52,6 +53,11 @@ TEMPLATE_DIRS = {
     "RentItApp/templates/seller/"
 }
 
+AUTHENTICATION_BACKENDS = (
+    'social.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -68,8 +74,19 @@ TEMPLATES = [
     },
 ]
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.tz',
+    'django.contrib.messages.context_processors.messages',
+    'social.apps.django_app.context_processors.backends',
+    'social.apps.django_app.context_processors.login_redirect',
+)
+
 WSGI_APPLICATION = 'RentIt.wsgi.application'
-ROOT_URLCONF = 'RentIt.urls'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
@@ -85,7 +102,9 @@ DATABASES = {
     }
 }
 
-
+SOCIAL_AUTH_FACEBOOK_KEY = '407754522748920'
+SOCIAL_AUTH_FACEBOOK_SECRET = '132e475d8e35caf2c73873fff6667f97'
+SOCIAL_AUTH_FACEBOOK_SCOPE = 'email', 'publish_actions', 'name', 'city'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/

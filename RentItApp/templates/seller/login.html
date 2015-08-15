@@ -50,7 +50,7 @@
                 src="{% static 'img_seller/logo.png' %}" class="login-img nav-custom"><strong>GroupZ</strong>in<br></a>
             <small>Please <strong>Login</strong> or <strong>Register</strong></small>
         </h1>
-        <strong style="color: red;">{{ list1 }}</strong>
+        <strong style="color: red;">{{ Error }}</strong>
     </div>
     <!-- END Login Title -->
 
@@ -64,7 +64,7 @@
                     <i class="fa fa-twitter"></i>
                 </div>
             </a>
-            <a href="/login_fb">
+            <a href="{% url 'social:begin' 'facebook' %}?next={{ request }}">
                 <div class="test-circle themed-border label-danger" data-toggle="tooltip" title="Facebook"
                      style="background-color: #3a5795;">
                     <i class="fa fa-facebook"></i>
