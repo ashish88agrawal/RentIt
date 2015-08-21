@@ -10,11 +10,6 @@ from forms import DocumentForm
 
 def product_add(request):
 	new_product_form = NewProductForm()
-	upload_photo_form = DocumentForm()
-	#register = ProductRegistration(uid=request.session['global_uid'])
-	#register.save()
-	#product_registration_list = ProductRegistration.objects.get(uid=request.session['global_uid'])
-	#product_id = product_registration_list.product_id
 	return render(request, 'seller/product_add.html', {'new_product_form': new_product_form})
 
 

@@ -32,6 +32,8 @@
     <!-- END Stylesheets -->
     <!-- Modernizr (browser feature detection library) & Respond.js (enables responsive CSS code on browsers that don't support it, eg IE8) -->
     <script src="{% static 'js_seller/vendor/modernizr-respond.min.js' %}"></script>
+    <script src="http://ajax.googleapis.com/ajax/lips/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
 <!-- Page Wrapper -->
@@ -152,35 +154,13 @@
                 <table id="ecom-products" class="table table-bordered table-striped table-vcenter">
                     <thead>
                     <tr>
-                        <th class="text-center">ID</th>
+                        <th class="text-center">Product ID</th>
                         <th class="text-center">Product Name</th>
                         <th class="text-center">Category</th>
                         <th class="text-center">Action</th>
                     </tr>
                     </thead>
                     <tbody>
-
-                    <script> type = "text/javascript" >
-                            function myfunction() {
-                                $('a').click(function (e) {
-                                    e.preventDefault(); // otherwise, it won't wait for the ajax response
-                                    $link = $(this); // because '$(this)' will be out of scope in your callback
-                                    alert("In Ajax");
-                                    $.ajax({
-                                        type: 'POST',
-                                        url: '/edit',
-                                        data: "31",
-                                        contentType: 'application/json',
-                                        error: function (err) {
-                                            alert("error - " + err);
-                                        },
-                                        success: function () {
-                                            window.location.href = $link.attr('modal-product-settings');
-                                        }
-                                    });
-                                });
-                            }
-                    </script>
 
                     {% for pr in pr_details %}
                         <tr>
@@ -190,10 +170,10 @@
                             <td class="text-center hidden-xs"><strong>{{ pr.pc_id }}</strong></td>
                             <td class="text-center">
                                 <div>
-                                    <a href="{% trans "javascript:myfunction();" %}" data-toggle="modal"
+                                    <a href="#modal-product-settings" data-toggle="modal"
                                        data-toggle="tooltip" title="Edit" class="btn btn-xs btn-default"><i
                                             class="fa fa-pencil"></i></a>
-                                    <a href="#deleteModal" data-toggle="modal" data-toggle="tooltip" title="Delete"
+                                    <a href ="#" id={{ pr.product_id }} data-toggle="modal" data-toggle="tooltip" title="Delete"
                                        class="btn btn-xs btn-danger"><i class="fa fa-times"></i></a>
                                     <a href="#modal-user-share" data-toggle="modal" data-toggle="tooltip" title="Share"
                                        class="btn btn-xs btn-default"><i class="fa fa-share-alt"></i></a>
@@ -541,6 +521,7 @@
     <!-- Load and execute javascript code used only in this page -->
     <script src="{% static 'js_seller/pages/ecomDashboard.js' %}"></script>
     <script src="{% static 'js_seller/pages/formsValidations.js' %}"></script>
+    <script src="{% static 'js_seller/pages/dashBoard.js' %}"></script>
     <script>$(function () {
         EcomDashboard.init();
     });</script>

@@ -1,5 +1,4 @@
 from django.shortcuts import render
-
 from RentItApp.models import ProductRegistration
 from RentItApp.models import ProductCategory
 
@@ -30,3 +29,10 @@ def show_details(request):
 	# print sUserDetails.uname
 	# print "CategoryName"+pcategory_id
 	return render(request, 'seller/page_ecom_dashboard.html', {'pr_details': pr, 'pr_category': pcategory_id})
+
+
+def delete_product(request, pr_id):
+	print(pr_id)
+	pr_delete = ProductRegistration.objects.get(product_id=pr_id)
+	pr_delete.delete()
+	return render(request, 'seller/user_dashboard.html')

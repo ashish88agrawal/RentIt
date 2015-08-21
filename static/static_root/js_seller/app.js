@@ -106,6 +106,8 @@ var App = function() {
 
         // Initialize Datepicker
         $('.input-datepicker, .input-daterange').datepicker({weekStart: 1});
+        $('.input-datepicker1').datepicker('setStartDate', '0');
+        $('.input-datepicker2').datepicker('setStartDate', '+1d');
         $('.input-datepicker-close').datepicker({weekStart: 1}).on('changeDate', function(e){ $(this).datepicker('hide'); });
 
         // Initialize Timepicker
