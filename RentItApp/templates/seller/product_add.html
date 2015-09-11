@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 {% load staticfiles %}
+{% load i18n %}
+{% csrf_token %}
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
 <!--[if gt IE 9]><!-->
@@ -87,6 +89,9 @@
             <!-- END Search Form -->
             <!-- Right Header Navigation -->
             <ul class="nav navbar-nav-custom pull-right">
+                <li>
+                    <h6 style="line-height: 29px;">Welcome <strong>{{ UserName }}</strong></h6>
+                </li>
                 <!-- User Dropdown -->
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
@@ -124,7 +129,7 @@
             <div class="content-header">
                 <ul class="nav-horizontal text-center">
                     <li>
-                        <a href="user_dashboard.html"><i class="fa fa-bar-chart"></i> Dashboard</a>
+                        <a href="{% url 'show_user_dashboard' %}"><i class="fa fa-bar-chart"></i> Dashboard</a>
                     </li>
                     <li class="active">
                         <a href="product_add.html"><i class="gi gi-plus"></i> Add Products</a>

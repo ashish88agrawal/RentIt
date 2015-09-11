@@ -1,22 +1,58 @@
 from django.shortcuts import render
 from django.template import RequestContext
-
 from forms import NewProductForm
+from RentItApp.models import User
+from RentItApp.models import UserRegistration
 from RentItApp.models import ProductRegistration
 from RentItApp.models import ProductCategory
 from RentItApp.models import ProductImage
-from forms import DocumentForm
 
 
 def product_add(request):
 	new_product_form = NewProductForm()
-	return render(request, 'seller/product_add.html', {'new_product_form': new_product_form})
+	user_email = request.session['uemail']
+	list1 = []
+	for e in User.objects.all():
+		list1.append(e.umail)
+		pass
+		if user_email in list1:
+			logged_user = User.objects.get(umail=user_email)
+			uid = logged_user.uid
+			ee = UserRegistration.objects.get(uid=uid)
+			uname = ee.uname
+			return render(request, 'seller/product_add.html', {'new_product_form': new_product_form, 'UserName': uname})
+		else:
+			return render(request, 'seller/product_add.html', {'new_product_form': new_product_form})
 
 
 def product_data_add(request):
 	register = ProductRegistration(uid=request.session['global_uid'], pc_id=request.POST.get("product_category"), product_name=request.POST.get("product_name"), available_from=request.POST.get("available_from"), available_till=request.POST.get("available_till"), product_title=request.POST.get("product_title"), product_description=request.POST.get("product_description"), rental_condition=request.POST.get("product_conditions"))
 	register.save()
-	return render(request, 'seller/user_dashboard.html')
+	user_email = request.session['uemail']
+	list1 = []
+	for e in User.objects.all():
+		list1.append(e.umail)
+		pass
+		if user_email in list1:
+			logged_user = User.objects.get(umail=user_email)
+			uid = logged_user.uid
+			ee = UserRegistration.objects.get(uid=uid)
+			uname = ee.uname
+			pr = ProductRegistration.objects.filter(uid=uid)
+			if pr.count() != 0:
+				for p in pr:
+					proc_name = ProductCategory.objects.get(pc_id=p.pc_id)
+					p.pc_id = proc_name.pc_name
+					pass
+
+				for sProduct in pr:
+					category_id = sProduct.pc_id
+					pass
+					return render(request, 'seller/user_dashboard.html', {'UserName': uname, 'pr_details': pr, 'pr_category': category_id})
+			else:
+				return render(request, 'seller/user_dashboard.html', {'UserName': uname})
+		else:
+				return render(request, 'seller/user_dashboard.html')
 
 
 def search_result(request):

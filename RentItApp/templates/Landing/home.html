@@ -90,6 +90,7 @@
                     <!-- END Main Menu -->
                 </nav>
                 <!-- END Site Navigation -->
+             </ul>
         </div>
     </header>
     <!-- END Site Header -->
@@ -139,7 +140,7 @@
                              data-animation-class="animation-fadeInQuick" data-element-offset="-100">
                             <div class="store-item">
                                 <div class="store-item-rating text-warning">
-                                    <i>Ad Title</i>
+                                    <i>{{ pr.product_title }}</i>
                                 </div>
                                 <div class="store-item-image">
                                     <a href="product_details.html">
@@ -159,7 +160,7 @@
                     {% endfor %}
 
                     <div class="col-md-12 text-right">
-                        <a href="product_list.html"><strong>View All</strong> <i class="fa fa-arrow-right"></i></a>
+                        <a href="{% url 'view_products' %}"><strong>View All</strong> <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <!-- END New Arrivals -->
@@ -321,12 +322,7 @@
 
 <!-- Include Jquery library from Google's CDN but if something goes wrong get Jquery from local file -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>!window.jQuery && document.write(decodeURI('%3Cscript src=";
-{% static ';
-js / vendor / jquery - 1.11;
-.2.min.js;
-' %}"%3E%3C/script%3E';
-))</script>
+<script>!window.jQuery && document.write(decodeURI('%3Cscript src=";{% static ';js / vendor / jquery - 1.11;.2.min.js;' %}"%3E%3C/script%3E';))</script>
 
 <!-- Bootstrap.js, Jquery plugins and Custom JS code -->
 <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
